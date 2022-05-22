@@ -71,3 +71,35 @@ function wrongClick() {
         yellowBox.classList.remove("active");
     }, 500)
 }
+
+//Every time game chooses and Add a new level
+function chooseRandomly() {
+    sequence = [];
+    level++;
+
+    if (level < maxLevel) {
+        mainText.innerHTML = "Level " + `${level}`;
+        randomBox = Math.floor(Math.random() * 4) + 1;
+        if (randomBox == 1) {
+            greenBoxClicked();
+        }
+        else if (randomBox == 2) {
+            redBoxClicked();
+        }
+        else if (randomBox == 3) {
+            blueBoxClicked();
+        }
+        else {
+            yellowBoxClicked();
+        }
+        pattern.push(randomBox);
+    }
+    else {
+        mainText.innerHTML = "YOU WIN!!"
+        setTimeout(function () {
+            window.location.reload();
+        }, 2000)
+    }
+
+    tracker = 0;
+}
