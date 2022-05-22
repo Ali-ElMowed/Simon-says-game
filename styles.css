@@ -1,6 +1,6 @@
-*{
+/**{
     background-color: #011C37;
-}
+}*/
 body{
     width: 100%;
     height: 100%;
@@ -90,9 +90,6 @@ h1{
     }
 }
 @media (max-width: 300px){
-    /* h1{
-        font-size: 10px;
-    } */
     .green-box, .red-box, .yellow-box, .blue-box{
         border: 1px solid black;
         border-radius: 20px;
@@ -101,4 +98,3 @@ h1{
         margin: 10px;
     }
 }
-`;
