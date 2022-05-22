@@ -28,6 +28,15 @@ h1{
     height: 200px;
     margin: 50px;
     cursor: pointer;
+    /*pointer-events: none;*/
+}
+.cant-click{
+    pointer-events: none;
+    cursor: default;
+}
+.can-click{
+    pointer-events: all;
+    cursor: pointer;
 }
 .green-box{
     background-color: #00FF00;
@@ -40,4 +49,13 @@ h1{
 }
 .blue-box{
     background-color: #0000FF;
+}
+.active{
+    background-color: #747474;
+}
+.active-cmptr{
+    opacity: 0.2;
+}
+.active-game{
+    background-color: #FF0000;
 }

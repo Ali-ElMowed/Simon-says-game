@@ -1,7 +1,9 @@
-var greenBox = document.getElementById("green-box");
-var redBox = document.getElementById("red-box");
-var blueBox = document.getElementById("blue-box");
-var yellowBox = document.getElementById("yellow-box");
+
+var greenBox = document.getElementsByClassName("green-box")[0];
+var redBox = document.getElementsByClassName("red-box")[0];
+var blueBox = document.getElementsByClassName("blue-box")[0];
+var yellowBox = document.getElementsByClassName("yellow-box")[0];
+var game = document.getElementsByClassName("game")[0];
 var mainText = document.getElementById("main-text");
 
 var greenAudio = new Audio("assets/audio/green.mp3");
