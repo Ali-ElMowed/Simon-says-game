@@ -108,3 +108,81 @@ redBox.addEventListener('click', checkRed);
 blueBox.addEventListener('click', checkBlue);
 yellowBox.addEventListener('click', checkYellow);
 document.addEventListener('keypress', chooseRandomly);
+
+//when player clicks check the pattern and the player sequence
+function checkGreen() {
+    greenBoxClicked();
+    sequence.push(1);
+    for (var i = 0; i < sequence.length; i++) {
+        var y = 0;
+        if (sequence[i] != pattern[i]) {
+            mainText.innerHTML = "YOU LOST!";
+            wrongClick();
+            setTimeout(function () { location.reload(); }, 500)
+            y++;
+            return
+        }
+    }
+    tracker++;
+    if (tracker == level) {
+        setTimeout(function () {
+            chooseRandomly();
+        }, 1000)
+    }
+}
+function checkRed() {
+    redBoxClicked();
+    sequence.push(2);
+    for (var i = 0; i < sequence.length; i++) {
+        if (sequence[i] != pattern[i]) {
+            mainText.innerHTML = "YOU LOST!";
+            wrongClick();
+            setTimeout(function () { location.reload(); }, 500)
+            return
+        }
+    }
+    tracker++;
+    if (tracker == level) {
+        setTimeout(function () {
+            chooseRandomly();
+        }, 1000)
+    }
+    console.log("count with click" + count);
+}
+function checkBlue() {
+    blueBoxClicked();
+    sequence.push(3);
+    for (var i = 0; i < sequence.length; i++) {
+        if (sequence[i] != pattern[i]) {
+            mainText.innerHTML = "YOU LOST!";
+            wrongClick();
+            setTimeout(function () { location.reload(); }, 500)
+            return
+        }
+    }
+    tracker++;
+    if (tracker == level) {
+        setTimeout(function () {
+            chooseRandomly();
+        }, 1000)
+    }
+}
+function checkYellow() {
+    yellowBoxClicked();
+    sequence.push(4);
+    for (var i = 0; i < sequence.length; i++) {
+        if (sequence[i] != pattern[i]) {
+            mainText.innerHTML = "YOU LOST!";
+            wrongClick();
+            setTimeout(function () { location.reload(); }, 500)
+            return
+        }
+    }
+    tracker++;
+    if (tracker == level) {
+        setTimeout(function () {
+            chooseRandomly();
+        }, 1000)
+    }
+}
+
