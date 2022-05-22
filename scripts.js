@@ -12,3 +12,9 @@ var blueAudio = new Audio("assets/audio/blue.mp3");
 var yellowAudio = new Audio("assets/audio/yellow.mp3");
 var wrongAudio = new Audio("assets/audio/wrong.mp3");
 
+var tracker = 0;
+var randomBox = 0;
+var sequence = [];
+var maxLevel = 16;
+var level = 0;
+var pattern = [];
