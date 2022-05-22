@@ -103,3 +103,8 @@ function chooseRandomly() {
 
     tracker = 0;
 }
+greenBox.addEventListener('click', checkGreen);
+redBox.addEventListener('click', checkRed);
+blueBox.addEventListener('click', checkBlue);
+yellowBox.addEventListener('click', checkYellow);
+document.addEventListener('keypress', chooseRandomly);
