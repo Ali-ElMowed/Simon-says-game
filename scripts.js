@@ -12,6 +12,7 @@ var blueAudio = new Audio("assets/audio/blue.mp3");
 var yellowAudio = new Audio("assets/audio/yellow.mp3");
 var wrongAudio = new Audio("assets/audio/wrong.mp3");
 
+var start = false;
 var tracker = 0;
 var randomBox = 0;
 var sequence = [];
@@ -76,7 +77,7 @@ function wrongClick() {
 function chooseRandomly() {
     sequence = [];
     level++;
-
+    start = false;
     if (level < maxLevel) {
         mainText.innerHTML = "Level " + `${level}`;
         randomBox = Math.floor(Math.random() * 4) + 1;
@@ -100,7 +101,7 @@ function chooseRandomly() {
             window.location.reload();
         }, 2000)
     }
-
+    start=true;
     tracker = 0;
 }
 greenBox.addEventListener('click', checkGreen);
